@@ -1,0 +1,5 @@
+outputs
+assets
+*.pyc
+*.egg-info
+imgui.ini
