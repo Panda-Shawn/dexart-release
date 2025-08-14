@@ -47,6 +47,7 @@ if __name__ == '__main__':
     parser.add_argument('--pretrain_path', type=str, default=None)
     parser.add_argument('--save_freq', type=int, default=1)
     parser.add_argument('--save_path', type=str, default=BASE_DIR)
+    parser.add_argument('--device', type=str, default='auto')
     args = parser.parse_args()
 
     task_name = args.task_name
@@ -110,6 +111,7 @@ if __name__ == '__main__':
                 adaptive_kl=0.02,
                 target_kl=0.2,
                 tensorboard_log=tensorboard_log,
+                device=args.device
                 )
 
     if pretrain_path is not None:
